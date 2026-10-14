@@ -352,8 +352,8 @@ function showHoi(){document.querySelectorAll(".page").forEach(p=>p.classList.rem
 launch?.addEventListener("click",showElection);back?.addEventListener("click",showHoi);
 new MutationObserver(setHoiTheme).observe(document.body,{subtree:true,attributes:true,attributeFilter:["class"]});setHoiTheme();
 // CẤU HÌNH: đổi thành baucu2, baucu3... khi mở đợt bầu cử mới.
-const ELECTION_EVENT_ID="baucu1";
-const SCRIPT_ELECTION_URL="https://script.google.com/macros/s/AKfycbzB7_rpA1yaJwSAckDcRnPP3jU75jOudKxvuIe1SqqqrhsHi5v3SqjDCcS9L0XvZlJP/exec";
+const ELECTION_EVENT_ID=(typeof BAUCU_EVENT_ID !== "undefined" && BAUCU_EVENT_ID) ? String(BAUCU_EVENT_ID) : "baucu1";
+const SCRIPT_ELECTION_URL=(typeof BAUCU_SCRIPT_URL !== "undefined" && BAUCU_SCRIPT_URL) ? String(BAUCU_SCRIPT_URL) : "https://script.google.com/macros/s/AKfycbzB7_rpA1yaJwSAckDcRnPP3jU75jOudKxvuIe1SqqqrhsHi5v3SqjDCcS9L0XvZlJP/exec";
 const candidates=[
 {n:1,name:"Phan Gia Bảo",hometown:"An Giang",ethnicity:"Kinh",religion:"Phật giáo Hòa Hảo",role:"Không"},
 {n:2,name:"Nguyễn Hoàng Thiên Kim",hometown:"Vĩnh Long",ethnicity:"Kinh",religion:"Không",role:"Ủy viên Ban Chấp hành Chi hội"},
