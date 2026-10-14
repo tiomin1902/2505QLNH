@@ -8,7 +8,17 @@ function showPage(id){pages.forEach(p=>p.classList.toggle("active",p.id===id));m
 $("menuBtn")?.addEventListener("click",openMenu);$("menuClose")?.addEventListener("click",closeMenu);overlay?.addEventListener("click",closeMenu);
 menuItems.forEach(i=>i.addEventListener("click",()=>showPage(i.dataset.page)));document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.go)));
 function fmt(date){return new Date(date).toLocaleString("vi-VN",{dateStyle:"short",timeStyle:"short",timeZone:"Asia/Ho_Chi_Minh"})}
-function availableActivities(){const now=Date.now();return ACTIVITIES.filter(a=>now>=new Date(a.opensAt).getTime()&&now<new Date(a.closesAt).getTime())}
+function availableActivities() {
+  const now = Date.now();
+  const source = Array.isArray(window.ADMIN_ACTIVITIES)
+    ? window.ADMIN_ACTIVITIES
+    : ACTIVITIES;
+
+  return source.filter(a =>
+    now >= new Date(a.opensAt).getTime() &&
+    now < new Date(a.closesAt).getTime()
+  );
+}
 function showActivityList(){clearInterval(timer);selectedActivity=null;detail.style.display="none";chooser.style.display="grid";const items=availableActivities();if(!items.length){chooser.innerHTML='<div class="empty-activities"><div style="font-size:28px;margin-bottom:8px">✦</div><strong>HIỆN CHƯA CÓ HOẠT ĐỘNG MỞ ĐĂNG KÝ</strong><br>Vui lòng quay lại trong thời gian đăng ký của các hoạt động.</div>';return}chooser.innerHTML="";items.forEach(a=>{const card=document.createElement("article");card.className="activity-choice";card.innerHTML=`<span class="open-label">● ĐANG MỞ ĐĂNG KÝ</span><h3>${escapeHtml(a.title)}</h3><p>${escapeHtml(a.description)}</p><div class="choice-meta">◷ Mở: ${fmt(a.opensAt)}<br>⌛ Đóng: ${fmt(a.closesAt)}<br>♙ Số lượng: Không giới hạn</div><button class="choice-btn" type="button">XEM CHI TIẾT & ĐĂNG KÝ →</button>`;card.querySelector("button").addEventListener("click",()=>openActivity(a));chooser.appendChild(card)})}
 function openActivity(a){selectedActivity=a;chooser.style.display="none";detail.style.display="block";$('uiEventTitle').textContent=a.title;$('uiEventTime').textContent=a.eventTime;$('uiEventLocation').textContent=a.location;$('uiEventDesc').textContent=a.description;$('uiEventNote').textContent=a.note;$('startText').textContent=fmt(a.opensAt);$('count').textContent="…";$('name').value="";$('studentId').value="";$('message').className="message";$('message').textContent="";sync();updateStatus();timer=setInterval(updateStatus,1000);window.scrollTo({top:0,behavior:"smooth"})}
 $('backToActivities')?.addEventListener("click",showActivityList);
