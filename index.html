@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -347,7 +348,9 @@ body.hoi-theme #musicToggleBtn{background:#0755a4!important;color:#fff!important
 const hoiPage=document.getElementById("hoi"), electionPage=document.getElementById("election");
 const launch=document.getElementById("startElection"), back=document.getElementById("backToHoi");
 function setHoiTheme(){const active=document.querySelector(".page.active");document.body.classList.toggle("hoi-theme",!!active&&(active.id==="hoi"||active.id==="election"));}
-function showElection(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));electionPage.classList.add("active");document.getElementById("menu")?.classList.remove("open");document.getElementById("overlay")?.classList.remove("show");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
+const electionEnabled=(typeof BAUCU_ACTIVE !== "undefined") && BAUCU_ACTIVE === true;
+launch?.toggleAttribute("hidden",!electionEnabled);
+function showElection(){if(!electionEnabled)return;document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));electionPage.classList.add("active");document.getElementById("menu")?.classList.remove("open");document.getElementById("overlay")?.classList.remove("show");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
 function showHoi(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));hoiPage.classList.add("active");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
 launch?.addEventListener("click",showElection);back?.addEventListener("click",showHoi);
 new MutationObserver(setHoiTheme).observe(document.body,{subtree:true,attributes:true,attributeFilter:["class"]});setHoiTheme();
