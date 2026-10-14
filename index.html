@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -151,18 +152,19 @@ body.hoi-theme #musicToggleBtn{background:#0755a4!important;color:#fff!important
 .voter-box{padding:23px;background:#fff;border:1px solid #cfe2f7;border-radius:18px;margin-bottom:22px}
 .voter-box h3{color:#0755a4;font-size:22px;margin-bottom:8px}.voter-box p{color:#58718b;line-height:1.6;font-size:14px;margin-bottom:15px}
 .voter-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.voter-fields .input{margin-bottom:0;border-color:#c4d9ef}
-.candidate-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.candidate-card{background:#fff;border:1px solid #cfe2f7;border-radius:18px;padding:22px;box-shadow:0 8px 25px #0755a40b;display:flex;flex-direction:column;gap:12px}
+.candidate-list{display:grid;grid-template-columns:1fr;gap:14px}
+.candidate-card{background:#fff;border:1px solid #cfe2f7;border-radius:18px;padding:18px 20px;box-shadow:0 8px 25px #0755a40b;display:grid;grid-template-columns:minmax(220px,1.05fr) minmax(360px,2fr) minmax(260px,1.1fr);align-items:center;gap:18px}
 .candidate-top{display:flex;align-items:flex-start;gap:12px}.candidate-number{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#e7f2ff;color:#0755a4;font-weight:bold}
 .candidate-card h3{font-size:19px;line-height:1.4;color:#064987}.candidate-role{font-size:12px;color:#1769aa;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
-.candidate-details{display:grid;grid-template-columns:1fr 1fr;gap:8px}.candidate-detail{padding:10px;background:#f3f8ff;border-radius:10px;font-size:13px;line-height:1.5;color:#425f7b}.candidate-detail strong{display:block;color:#0755a4;font-size:11px;letter-spacing:.5px;margin-bottom:3px}
-.candidate-vote{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto}.vote-option{position:relative}.vote-option input{position:absolute;opacity:0;pointer-events:none}.vote-option label{display:flex;justify-content:center;align-items:center;gap:7px;text-align:center;padding:12px 8px;border:1px solid #b9d3ec;border-radius:11px;color:#315d85;background:#fff;font-weight:bold;font-size:14px;cursor:pointer;transition:.2s}.vote-option input:checked+label{background:#0755a4;color:#fff;border-color:#0755a4;box-shadow:0 4px 12px #0755a425}.vote-option input:focus-visible+label{outline:3px solid #80bfff}
+.candidate-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.candidate-detail{padding:10px;background:#f3f8ff;border-radius:10px;font-size:13px;line-height:1.5;color:#425f7b}.candidate-detail strong{display:block;color:#0755a4;font-size:11px;letter-spacing:.5px;margin-bottom:3px}
+.candidate-vote{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:0}.vote-option{position:relative}.vote-option input{position:absolute;opacity:0;pointer-events:none}.vote-option label{display:flex;justify-content:center;align-items:center;gap:7px;text-align:center;padding:12px 8px;border:1px solid #b9d3ec;border-radius:11px;color:#315d85;background:#fff;font-weight:bold;font-size:14px;cursor:pointer;transition:.2s}.vote-option input:checked+label{background:#0755a4;color:#fff;border-color:#0755a4;box-shadow:0 4px 12px #0755a425}.vote-option input:focus-visible+label{outline:3px solid #80bfff}
 .election-submit{width:100%;margin:22px 0;padding:16px;border:0;border-radius:12px;background:linear-gradient(135deg,#0755a4,#1684d8);color:#fff;font-size:16px;font-weight:bold;letter-spacing:.7px;box-shadow:0 8px 20px #0755a425}.election-submit:disabled{opacity:.6;cursor:not-allowed}
 #election .message.success{background:#e5f5ed;color:#176b3a}#election .message.error{background:#fff0f0;color:#a11}
 .election-results{background:#fff;border:1px solid #cfe2f7;border-radius:18px;padding:23px;margin-top:25px}.results-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:14px}.results-head .label{font-size:11px;color:#1769aa;letter-spacing:1.4px;font-weight:bold}.results-head h3{color:#0755a4;font-size:25px;margin-top:5px}.refresh-results{border:1px solid #b5d3f0;background:#f3f8ff;color:#0755a4;padding:10px 14px;border-radius:10px;font-weight:bold}
 .results-list{display:grid;gap:13px;margin-top:16px}.result-row{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr auto;gap:12px;align-items:center}.result-name{font-size:14px;font-weight:bold;color:#264c70}.result-bars{display:grid;gap:5px}.result-track{height:8px;background:#eaf1f8;border-radius:20px;overflow:hidden}.result-fill{height:100%;border-radius:20px;background:#1478c9}.result-fill.no{background:#a8bfd5}.result-count{font-size:12px;color:#52718d;text-align:right;white-space:nowrap}
 #election .footer,#hoi .footer{background:#064987;color:#e7f3ff}
-@media(max-width:700px){.election-stats{grid-template-columns:1fr 1fr;gap:9px}.election-stat{padding:15px 8px}.election-stat span{font-size:9px;letter-spacing:.7px}.election-stat strong{font-size:21px}.voter-fields,.candidate-list{grid-template-columns:1fr}.candidate-card{padding:18px}.candidate-details{grid-template-columns:1fr 1fr}.election-results{padding:18px}.results-head h3{font-size:21px}.result-row{grid-template-columns:1fr auto;gap:7px}.result-name{grid-column:1/-1}.result-bars{grid-column:1}.result-count{grid-column:2;grid-row:2}}
+@media(max-width:900px){.candidate-card{grid-template-columns:1fr;gap:12px}.candidate-details{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.voter-fields{grid-template-columns:1fr}.candidate-card{padding:16px}.candidate-details{grid-template-columns:1fr 1fr}.candidate-vote{grid-template-columns:1fr 1fr}}
 
 @media(max-width:700px){.hoi-countdown-card{padding:25px 17px}.hoi-timer{gap:7px;margin:22px auto}.hoi-time-unit{padding:15px 4px}.hoi-time-label{font-size:9px;letter-spacing:1px}.hoi-event-details{grid-template-columns:1fr;gap:0}.hoi-event-detail{padding:12px 5px}}
 @media(max-width:700px){
@@ -275,11 +277,7 @@ body.hoi-theme #musicToggleBtn{background:#0755a4!important;color:#fff!important
 <div class="election-heading">
 <div class="label">HỘI SINH VIÊN • CHI HỘI 2505QLNH</div>
 <h2>BẦU CỬ BAN CHẤP HÀNH CHI HỘI<br>NHIỆM KỲ 2026 - 2027</h2>
-<p>Đọc thông tin từng ứng cử viên và chọn một mức tín nhiệm cho mỗi người.</p>
-</div>
-<div class="election-stats" id="electionStats">
-<div class="election-stat"><span>TỔNG LƯỢT BỎ PHIẾU</span><strong id="totalBallots">—</strong></div>
-<div class="election-stat"><span>TRẠNG THÁI KẾT NỐI</span><strong id="sheetStatus">Chưa kết nối</strong></div>
+<p>Xem thông tin từng ứng cử viên và chọn Tín nhiệm hoặc Không tín nhiệm cho mỗi người.</p>
 </div>
 <div class="voter-box">
 <h3>Thông tin người bỏ phiếu</h3>
@@ -289,11 +287,7 @@ body.hoi-theme #musicToggleBtn{background:#0755a4!important;color:#fff!important
 <div class="candidate-list" id="candidateList"></div>
 <button class="election-submit" id="submitBallot">XÁC NHẬN VÀ GỬI PHIẾU</button>
 <div class="message" id="electionMessage"></div>
-<div class="election-results">
-<div class="results-head"><div><span class="label">THỐNG KÊ TỪ GOOGLE SHEETS</span><h3>Kết quả tín nhiệm</h3></div><button class="refresh-results" id="refreshResults">↻ Làm mới</button></div>
-<p class="election-note">Số liệu được lấy từ Google Sheets khi đã cấu hình và triển khai Apps Script. Chưa kết nối sẽ không hiển thị số liệu giả.</p>
-<div class="results-list" id="resultsList"><div class="empty">Chưa kết nối Google Sheets.</div></div>
-</div></div>
+</div>
 <div class="footer">CHI HỘI 2505QLNH</div>
 </section>
 <section id="activity" class="page">
@@ -359,7 +353,7 @@ body.hoi-theme #musicToggleBtn{background:#0755a4!important;color:#fff!important
 const hoiPage=document.getElementById("hoi"), electionPage=document.getElementById("election");
 const launch=document.getElementById("startElection"), back=document.getElementById("backToHoi");
 function setHoiTheme(){const active=document.querySelector(".page.active");document.body.classList.toggle("hoi-theme",!!active&&(active.id==="hoi"||active.id==="election"));}
-function showElection(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));electionPage.classList.add("active");document.getElementById("menu")?.classList.remove("open");document.getElementById("overlay")?.classList.remove("show");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});loadResults();}
+function showElection(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));electionPage.classList.add("active");document.getElementById("menu")?.classList.remove("open");document.getElementById("overlay")?.classList.remove("show");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
 function showHoi(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));hoiPage.classList.add("active");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
 launch?.addEventListener("click",showElection);back?.addEventListener("click",showHoi);
 new MutationObserver(setHoiTheme).observe(document.body,{subtree:true,attributes:true,attributeFilter:["class"]});setHoiTheme();
@@ -379,10 +373,8 @@ const candidateList=document.getElementById("candidateList"),message=document.ge
 candidateList.innerHTML=candidates.map(c=>`<article class="candidate-card"><div class="candidate-top"><div class="candidate-number">${c.n.toString().padStart(2,"0")}</div><div><h3>${c.name}</h3><div class="candidate-role">${c.role}</div></div></div><div class="candidate-details"><div class="candidate-detail"><strong>QUÊ QUÁN</strong>${c.hometown}</div><div class="candidate-detail"><strong>DÂN TỘC</strong>${c.ethnicity}</div><div class="candidate-detail"><strong>TÔN GIÁO</strong>${c.religion}</div><div class="candidate-detail"><strong>ỨNG CỬ VIÊN</strong>Ban Chấp hành Chi hội</div></div><div class="candidate-vote"><div class="vote-option"><input type="radio" id="vote-${c.n}-yes" name="vote-${c.n}" value="Tín nhiệm"><label for="vote-${c.n}-yes">✓ Tín nhiệm</label></div><div class="vote-option"><input type="radio" id="vote-${c.n}-no" name="vote-${c.n}" value="Không tín nhiệm"><label for="vote-${c.n}-no">○ Không tín nhiệm</label></div></div></article>`).join("");
 function showMessage(text,type){message.textContent=text;message.className="message show "+type;}
 function api(action,payload={}){return new Promise((resolve,reject)=>{if(!SCRIPT_ELECTION_URL||SCRIPT_ELECTION_URL.includes("PASTE_YOUR")){reject(new Error("Chưa kết nối Google Sheets. Hãy dán URL triển khai Apps Script vào biến SCRIPT_ELECTION_URL trong index.html."));return;}const callback="electionCallback_"+Date.now()+"_"+Math.random().toString(36).slice(2);const script=document.createElement("script");const timeout=setTimeout(()=>{cleanup();reject(new Error("Không kết nối được Apps Script. Hãy kiểm tra URL triển khai và quyền truy cập."));},15000);function cleanup(){clearTimeout(timeout);delete window[callback];script.remove();}window[callback]=data=>{cleanup();resolve(data);};script.onerror=()=>{cleanup();reject(new Error("Không tải được dữ liệu từ Google Sheets."));};const url=new URL(SCRIPT_ELECTION_URL);url.searchParams.set("action",action);url.searchParams.set("callback",callback);if(action==="vote")url.searchParams.set("payload",JSON.stringify(payload));script.src=url.toString();document.body.appendChild(script);});}
-async function loadResults(){const status=document.getElementById("sheetStatus"),total=document.getElementById("totalBallots"),list=document.getElementById("resultsList");if(SCRIPT_ELECTION_URL.includes("PASTE_YOUR")){status.textContent="Chưa kết nối";total.textContent="—";list.innerHTML='<div class="empty">Hãy cấu hình Apps Script để xem số liệu thực tế.</div>';return;}status.textContent="Đang tải…";try{const data=await api("results");if(!data.ok)throw new Error(data.message||"Không lấy được dữ liệu");status.textContent="Đã kết nối";total.textContent=data.totalBallots;list.innerHTML=candidates.map(c=>{const r=data.results[c.name]||{yes:0,no:0};const sum=r.yes+r.no||1;return `<div class="result-row"><div class="result-name">${c.n}. ${c.name}</div><div class="result-bars"><div class="result-track" title="Tín nhiệm"><div class="result-fill" style="width:${r.yes/sum*100}%"></div></div><div class="result-track" title="Không tín nhiệm"><div class="result-fill no" style="width:${r.no/sum*100}%"></div></div></div><div class="result-count">✓ ${r.yes} · ○ ${r.no}</div></div>`}).join("");}catch(e){status.textContent="Lỗi kết nối";list.innerHTML=`<div class="empty">${e.message}</div>`;}}
-submit?.addEventListener("click",async()=>{const voterName=document.getElementById("voterName").value.trim(),voterId=document.getElementById("voterId").value.trim();if(!voterName||!voterId){showMessage("Vui lòng nhập họ tên và mã số sinh viên/mã hội viên.","error");return;}const votes={};for(const c of candidates){const selected=document.querySelector(`input[name="vote-${c.n}"]:checked`);if(!selected){showMessage(`Bạn chưa chọn tín nhiệm hoặc không tín nhiệm cho ứng cử viên ${c.name}.`,"error");return;}votes[c.name]=selected.value;}if(!confirm("Bạn xác nhận các lựa chọn và gửi phiếu bầu? Sau khi gửi sẽ không thể gửi lại bằng cùng mã hội viên."))return;submit.disabled=true;submit.textContent="ĐANG GỬI PHIẾU…";try{const result=await api("vote",{voterName,voterId,votes});if(!result.ok)throw new Error(result.message||"Không gửi được phiếu.");showMessage("Đã ghi nhận phiếu bầu của bạn.","success");document.querySelectorAll("#election input").forEach(el=>el.disabled=true);submit.textContent="ĐÃ GỬI PHIẾU";await loadResults();}catch(e){showMessage(e.message,"error");submit.disabled=false;submit.textContent="XÁC NHẬN VÀ GỬI PHIẾU";}});
-document.getElementById("refreshResults")?.addEventListener("click",loadResults);
-loadResults();
+submit?.addEventListener("click",async()=>{const voterName=document.getElementById("voterName").value.trim(),voterId=document.getElementById("voterId").value.trim();if(!voterName||!voterId){showMessage("Vui lòng nhập họ tên và mã số sinh viên/mã hội viên.","error");return;}const votes={};for(const c of candidates){const selected=document.querySelector(`input[name="vote-${c.n}"]:checked`);if(!selected){showMessage(`Bạn chưa chọn tín nhiệm hoặc không tín nhiệm cho ứng cử viên ${c.name}.`,"error");return;}votes[c.name]=selected.value;}if(!confirm("Bạn xác nhận các lựa chọn và gửi phiếu bầu? Sau khi gửi sẽ không thể gửi lại bằng cùng mã hội viên."))return;submit.disabled=true;submit.textContent="ĐANG GỬI PHIẾU…";try{const result=await api("vote",{voterName,voterId,votes});if(!result.ok)throw new Error(result.message||"Không gửi được phiếu.");showMessage("Đã ghi nhận phiếu bầu của bạn.","success");document.querySelectorAll("#election input").forEach(el=>el.disabled=true);submit.textContent="ĐÃ GỬI PHIẾU";}catch(e){showMessage(e.message,"error");submit.disabled=false;submit.textContent="XÁC NHẬN VÀ GỬI PHIẾU";}});
+
 })();
 </script>
 <script>
