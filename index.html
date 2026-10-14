@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -364,7 +363,7 @@ function showElection(){document.querySelectorAll(".page").forEach(p=>p.classLis
 function showHoi(){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));hoiPage.classList.add("active");setHoiTheme();window.scrollTo({top:0,behavior:"smooth"});}
 launch?.addEventListener("click",showElection);back?.addEventListener("click",showHoi);
 new MutationObserver(setHoiTheme).observe(document.body,{subtree:true,attributes:true,attributeFilter:["class"]});setHoiTheme();
-const SCRIPT_ELECTION_URL="PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SCRIPT_ELECTION_URL="https://script.google.com/macros/s/AKfycbzB7_rpA1yaJwSAckDcRnPP3jU75jOudKxvuIe1SqqqrhsHi5v3SqjDCcS9L0XvZlJP/exec";
 const candidates=[
 {n:1,name:"Phan Gia Bảo",hometown:"An Giang",ethnicity:"Kinh",religion:"Phật giáo Hòa Hảo",role:"Không"},
 {n:2,name:"Nguyễn Hoàng Thiên Kim",hometown:"Vĩnh Long",ethnicity:"Kinh",religion:"Không",role:"Ủy viên Ban Chấp hành Chi hội"},
