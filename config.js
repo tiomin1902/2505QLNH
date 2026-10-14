@@ -1,4 +1,14 @@
+```javascript
+// ==========================================
+// CẤU HÌNH HỆ THỐNG CHI HỘI 2505QLNH
+// ==========================================
+
+// Hệ thống đăng ký hoạt động
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw47YRZPh9w-SLci-ll0_bumZiIbqOUUO0w_cshvZx5Glo_DIi3tWPXa7iGCQYspapY/exec";
+
+// DỮ LIỆU DỰ PHÒNG
+// Khi tải dữ liệu Admin thành công, app.js sẽ ưu tiên
+// window.ADMIN_ACTIVITIES thay vì danh sách bên dưới.
 const ACTIVITIES = [
   {
     id: "ThanhAmTriThuc_2026",
@@ -23,5 +33,13 @@ const ACTIVITIES = [
     unlimited: true
   }
 ];
+
+// ==========================================
+// HỆ THỐNG BẦU CỬ
+// GIỮ NGUYÊN CẤU HÌNH HIỆN TẠI
+// ==========================================
+
 const BAUCU_EVENT_ID = "baucu1";
+
 const BAUCU_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzB7_rpA1yaJwSAckDcRnPP3jU75jOudKxvuIe1SqqqrhsHi5v3SqjDCcS9L0XvZlJP/exec";
+```
