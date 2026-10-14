@@ -28,4 +28,4 @@ const BAUCU_EVENT_ID = "baucu1";
 const BAUCU_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzB7_rpA1yaJwSAckDcRnPP3jU75jOudKxvuIe1SqqqrhsHi5v3SqjDCcS9L0XvZlJP/exec";
 
 // Bật/tắt chức năng bầu cử
-const BAUCU_ACTIVE = true;
+const BAUCU_ACTIVE = false;
